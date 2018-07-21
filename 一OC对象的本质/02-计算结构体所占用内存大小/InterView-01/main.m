@@ -44,11 +44,20 @@ struct Test1 {
 
 
 
+
+
+
+
+
 struct Test2 {
     int a; // 4
     double b; // 8
     char c; // 1
 };// 24
+
+
+
+
 
 
 struct Test3 {
