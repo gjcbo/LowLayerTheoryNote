@@ -83,6 +83,10 @@ void variableCapture() {
 }
 
 #pragma mark - 三 猜测变量的存储区域:根据已知推测未知
+/**
+  堆: 动态分配内存，程序员管理内存，程序员申请，程序员释放。
+  栈:操作系统自动分配，存放局部变量。栈区很危险，随时被释放。
+ */
 void test4(void){
     int num1 = 10;
     static int staticNum = 30;
