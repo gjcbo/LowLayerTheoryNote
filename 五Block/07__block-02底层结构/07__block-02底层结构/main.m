@@ -36,6 +36,22 @@ struct __block_impl {
     void *FuncPtr;
 };
 
+
+//理论 __block的内存管理。
+/**
+ 1.当block在栈上时, 并不会对__block产生强引用。
+ 2.当block被拷贝到堆上时
+ 2-1> 会调用block内部的copy函数
+ 2-2> copy内部会调用 _Block_object_assign 函数
+ 2-3> _Block_object_assing 函数会对__block变量形成强引用 (retain)。
+  这里仅限于ARC时会retain，MRC时不会retain
+ 
+
+ 当block从 堆中移除的时候
+ 1> 会调用block内部的 dispose 函数
+ 2> _Block_object_assign 函数内部会调用 _Block_object_dispose 函数
+ 3> _Block_object_dispose函数会自动释放引用的__block变量(release)
+ */
 struct __main_block_desc_0 {
     size_t reserved;
     size_t Block_size;
@@ -76,12 +92,10 @@ int main(int argc, const char * argv[]) {
         };
         
         
-        
         //将block强制转换成这种结构体 __main_block_impl_0
         struct __main_block_impl_0 *blockImpl = (__bridge struct __main_block_impl_0 *)block;
         
         block();
-
     }
     return 0;
 }
