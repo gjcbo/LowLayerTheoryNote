@@ -18,7 +18,7 @@
 
 #pragma mark - 二 堆上的block
 /**
- 如果block被拷贝到堆上
+ 如果block被拷贝到堆上 这个相当于是 retain 引用计数+1
  1>会调用block内部的copy函数
  2>copy函数内部会调用 _Block_object_assign 函数
  3> _Block_object_assign函数内部会根据 auto变量的修饰符(__strong, __weak )做出相应的操作 形成强引用或弱引用。
@@ -27,9 +27,20 @@
  如果block从堆上被移除
  1>会调用block内部的dispose函数
  2>dispose 函数内部会自动调用 _Block_object_dispose 函数
- 3>_Block_object_dispose 函数内部会自动释放引用auto变量。
+ 3>_Block_object_dispose 函数内部会自动释放引用auto变量。 这个相当于是 release 引用计数-1
  */
 
+int main(){
+    
+    //问：CGD 里的代码会执行吗？
+    //延时0.35秒
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSLog(@"hello world");
+    });
+    NSLog(@"---------");
+    
+    return 0; //到这函数结束了,所以GCD里面的代码永远不会被执行    
+}
 
 
 
