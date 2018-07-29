@@ -25,7 +25,6 @@
 /* Begin PBXFileReference section */
 		49A6AC10210D532E00B0C583 /* 07-4__block的frowarding指针 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "07-4__block的frowarding指针"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A6AC13210D532E00B0C583 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		49A6AC1D210D557300B0C583 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +58,6 @@
 			isa = PBXGroup;
 			children = (
 				49A6AC13210D532E00B0C583 /* main.m */,
-				49A6AC1D210D557300B0C583 /* main.cpp */,
 			);
 			path = "07-4__block的frowarding指针";
 			sourceTree = "<group>";
