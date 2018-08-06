@@ -17,6 +17,11 @@
 #### 一 ：消息机制的理解
 OC 方法的调用底层都会被转成了objc_msgSend()函数的调用。给receive(方法调用者)发送了一条消息(selector方法名)。每一个方法内部都有两个默认参数：self 消息的接收者、_cmd 方法选择器(SEL) 
 
+关于方法找不到的处理方式：
+从生活的角度：要么你动态添加一个。要么你让人家去处理（帅锅）。
+体现在代码上：要么动态方法解析+(BOOL)resolveXXXXMethod:(SEL)sel 中动态添加一个方法的实现。  要么进行消息转发，干不了，帅锅给人家。- (id)forwardingTargetForSelector:(SEL)aSelector { return 背锅的人 } 
+
+
 OC的消息机制分为三个阶段：1、消息发送,2、动态方法解析，3、消息转发。
 
 - 消息发送阶段流程图：
