@@ -15,8 +15,8 @@
 		49A32D0421173C95006CCDFE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A32D0321173C95006CCDFE /* main.m */; };
 		49A32D0E21173F57006CCDFE /* HookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A32D0D21173F57006CCDFE /* HookViewController.m */; };
 		49A32D1521173FB9006CCDFE /* UIView+Hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A32D1421173FB9006CCDFE /* UIView+Hook.m */; };
-		49A32D1B211742F0006CCDFE /* NSObject+HookSwizzing.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A32D1A211742F0006CCDFE /* NSObject+HookSwizzing.m */; };
-		49A32D1E211749F3006CCDFE /* NSArray+Hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A32D1D211749F3006CCDFE /* NSArray+Hook.m */; };
+		49CBF6DA2117D92C0010F8A2 /* NSArray+Hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CBF6D62117D92C0010F8A2 /* NSArray+Hook.m */; };
+		49CBF6DB2117D92C0010F8A2 /* NSObject+Swizzing.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CBF6D92117D92C0010F8A2 /* NSObject+Swizzing.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,10 +34,10 @@
 		49A32D0D21173F57006CCDFE /* HookViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HookViewController.m; sourceTree = "<group>"; };
 		49A32D1321173FB9006CCDFE /* UIView+Hook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Hook.h"; sourceTree = "<group>"; };
 		49A32D1421173FB9006CCDFE /* UIView+Hook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Hook.m"; sourceTree = "<group>"; };
-		49A32D19211742F0006CCDFE /* NSObject+HookSwizzing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+HookSwizzing.h"; sourceTree = "<group>"; };
-		49A32D1A211742F0006CCDFE /* NSObject+HookSwizzing.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HookSwizzing.m"; sourceTree = "<group>"; };
-		49A32D1C211749F3006CCDFE /* NSArray+Hook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Hook.h"; sourceTree = "<group>"; };
-		49A32D1D211749F3006CCDFE /* NSArray+Hook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Hook.m"; sourceTree = "<group>"; };
+		49CBF6D62117D92C0010F8A2 /* NSArray+Hook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Hook.m"; sourceTree = "<group>"; };
+		49CBF6D72117D92C0010F8A2 /* NSArray+Hook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Hook.h"; sourceTree = "<group>"; };
+		49CBF6D82117D92C0010F8A2 /* NSObject+Swizzing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzing.h"; sourceTree = "<group>"; };
+		49CBF6D92117D92C0010F8A2 /* NSObject+Swizzing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzing.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,12 +105,12 @@
 		49A32D0F21173F88006CCDFE /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				49A32D19211742F0006CCDFE /* NSObject+HookSwizzing.h */,
-				49A32D1A211742F0006CCDFE /* NSObject+HookSwizzing.m */,
+				49CBF6D72117D92C0010F8A2 /* NSArray+Hook.h */,
+				49CBF6D62117D92C0010F8A2 /* NSArray+Hook.m */,
+				49CBF6D82117D92C0010F8A2 /* NSObject+Swizzing.h */,
+				49CBF6D92117D92C0010F8A2 /* NSObject+Swizzing.m */,
 				49A32D1321173FB9006CCDFE /* UIView+Hook.h */,
 				49A32D1421173FB9006CCDFE /* UIView+Hook.m */,
-				49A32D1C211749F3006CCDFE /* NSArray+Hook.h */,
-				49A32D1D211749F3006CCDFE /* NSArray+Hook.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -186,12 +186,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				49A32CF921173C94006CCDFE /* ViewController.m in Sources */,
+				49CBF6DA2117D92C0010F8A2 /* NSArray+Hook.m in Sources */,
+				49CBF6DB2117D92C0010F8A2 /* NSObject+Swizzing.m in Sources */,
 				49A32D0421173C95006CCDFE /* main.m in Sources */,
-				49A32D1E211749F3006CCDFE /* NSArray+Hook.m in Sources */,
 				49A32D1521173FB9006CCDFE /* UIView+Hook.m in Sources */,
 				49A32CF621173C93006CCDFE /* AppDelegate.m in Sources */,
 				49A32D0E21173F57006CCDFE /* HookViewController.m in Sources */,
-				49A32D1B211742F0006CCDFE /* NSObject+HookSwizzing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

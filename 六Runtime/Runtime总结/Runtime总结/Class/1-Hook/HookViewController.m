@@ -21,20 +21,17 @@
     //使用hook的效果：命名传的是redColor。实际变成了绿色。
     self.view.backgroundColor = [UIColor redColor];
     
-    [self demo1];
+    [self demo1ArrayAddNilObj];
 }
 
 
 //向数组中添加 nil 元素导致奔溃。
-- (void)demo1 {
-//    NSMutableArray *arrM = [NSMutableArray array];
-//    NSArray *str = nil;
-//    [arrM addObject:str];
-    
+- (void)demo1ArrayAddNilObj {
     NSMutableArray *arr = [NSMutableArray array];
     NSString *str = nil;
     [arr addObject:str];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

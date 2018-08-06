@@ -1,5 +1,5 @@
 //
-//  NSArray+Hook.h
+//  NSObject+Swizzing.h
 //  runtime消息转发
 //
 //  Created by RaoBo on 2018/8/5.
@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSArray (Hook)
+@interface NSObject (Swizzing)
+
++ (void)rb_swizzingOriginSelector:(SEL)originSel swizzledSelector:(SEL)swizzledSel;
 
 @end
