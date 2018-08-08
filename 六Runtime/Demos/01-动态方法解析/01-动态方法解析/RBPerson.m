@@ -10,7 +10,9 @@
 #import <objc/runtime.h>
 
 @implementation RBPerson
-
+- (id)forwardingTargetForSelector:(SEL)aSelector {
+    return self;
+}
 #pragma mark - 方式四  ------------------------------
 //调用C语言函数
 void c_other(id self, SEL _cmd) {
